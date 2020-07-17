@@ -3,7 +3,7 @@
     <h2 class="centered">View Jobs By Category</h2>
 </div>
 
-<table class="centeredTable">
+<table class="job-listing">
     <tr>
         @foreach(var column in ViewBag.columns)
         {
@@ -15,11 +15,12 @@
             //TODO #2: Complete the View Jobs By Category Table
         }
 
-        <td></td> @* Feel free to remove or modify this element if necessary. *@
+        <td><a asp-controller="List" asp-action="Jobs">All</a></td> @* Feel free to remove or modify this element if necessary. *@
         @foreach (var category in ViewBag.tableChoices)
         {
             <td>
                 <ul>
+                    
                     @foreach (var item in category.Value)
                     {
                         <li>
